@@ -31,19 +31,19 @@ const CardDetails = () => {
                         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                             Address: {productInCards.address}
                         </p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Order Review: ${productInCards.somedata}
+                        </p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Price: ${productInCards.price}
+                        </p>
                         {productInCart ? (
                             <>
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                                     Quantity: {productInCart.qnty}
                                 </p>
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                    Price: ${productInCart.price}
-                                </p>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                                     Total Price: ${productInCart.price * productInCart.qnty}
-                                </p>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                    Order Review: ${productInCart.somedata}
                                 </p>
                                 <div className='flex gap-6'>
                                     <div className='flex items-center'>
@@ -88,12 +88,6 @@ const CardDetails = () => {
                             </>
                         ) : (
                             <>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                    Price: ${productInCards.price}
-                                </p>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                    Order Review: ${productInCards.somedata}
-                                </p>
                                 <button
                                     onClick={() => dispatch(addToCart(productInCards))}
                                     className="text-white bg-blue-700 hover:bg-blue-800 transition-all duration-300 rounded-lg px-4 py-2"
