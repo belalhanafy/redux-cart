@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCartShopping } from "react-icons/fa6";
 import { useDispatch, useSelector } from 'react-redux';
-import Cart from './Cart';
 import { handleCartItems } from '../redux/CartSlice';
+import { IoMdHeart } from 'react-icons/io';
 
 const Header = () => {
 
     let { cart } = useSelector(state => state.cart)
+    let { wishList } = useSelector (state => state.wishList)
     let dispatch = useDispatch()
-
+    
     
     return (
         <nav className="bg-gray-400 border-gray-200">
@@ -27,6 +28,16 @@ const Header = () => {
                             </span>
 
                             <span className='absolute rounded-full -top-2 -right-2 w-5 h-5 bg-black text-sm text-white flex items-center justify-center'>{cart.length}</span>
+                        </li>
+                        <li className='relative'>
+                            <span
+                                className={`block text-3xl text-white bg-blue-700 rounded bg-transparent p-0}`}
+                            >
+                                <IoMdHeart />
+                            </span>
+
+                            <span className='absolute rounded-full -top-2 -right-2 w-5 h-5 bg-black text-sm text-white flex items-center justify-center'>{wishList.length}</span>
+
                         </li>
                     </ul>
                 </div>

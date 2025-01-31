@@ -104,6 +104,46 @@ export let cartReducer = cartSlice.reducer;
 export let { addToCart, deleteProduct, increaseQuantity, decreaseQuantity, emptyCart, getTotalPrice,handleCartItems } = cartSlice.actions;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //----------------------------------------------------------
 // How Draft State Works
 //      Immer creates a draft: When a reducer function runs, Immer wraps the state with a proxy to track changes.
